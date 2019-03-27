@@ -44,13 +44,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtBoxE = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.txtBoxA = new System.Windows.Forms.TextBox();
             this.txtBoxB = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -192,17 +190,6 @@
             this.textBox8.Size = new System.Drawing.Size(440, 181);
             this.textBox8.TabIndex = 26;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(161, 242);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Найти решение";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // txtBoxA
             // 
             this.txtBoxA.Location = new System.Drawing.Point(40, 85);
@@ -246,28 +233,16 @@
             this.label10.TabIndex = 32;
             this.label10.Text = "До";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(161, 213);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Найти решение";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 277);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtBoxB);
             this.Controls.Add(this.txtBoxA);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtBoxE);
@@ -309,13 +284,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBoxE;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtBoxA;
         private System.Windows.Forms.TextBox txtBoxB;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button3;
     }
 }
 
