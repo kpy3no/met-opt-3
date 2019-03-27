@@ -42,11 +42,11 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtBoxE = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtBoxA = new System.Windows.Forms.TextBox();
+            this.txtBoxB = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -174,13 +174,13 @@
             this.label7.TabIndex = 25;
             this.label7.Text = "eps";
             // 
-            // textBox7
+            // txtBoxE
             // 
-            this.textBox7.Location = new System.Drawing.Point(146, 85);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 24;
-            this.textBox7.Text = "0,5";
+            this.txtBoxE.Location = new System.Drawing.Point(146, 85);
+            this.txtBoxE.Name = "txtBoxE";
+            this.txtBoxE.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxE.TabIndex = 24;
+            this.txtBoxE.Text = "0,5";
             // 
             // textBox8
             // 
@@ -203,21 +203,21 @@
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox9
+            // txtBoxA
             // 
-            this.textBox9.Location = new System.Drawing.Point(40, 85);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 28;
-            this.textBox9.Text = "-1000";
+            this.txtBoxA.Location = new System.Drawing.Point(40, 85);
+            this.txtBoxA.Name = "txtBoxA";
+            this.txtBoxA.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxA.TabIndex = 28;
+            this.txtBoxA.Text = "-1000";
             // 
-            // textBox10
+            // txtBoxB
             // 
-            this.textBox10.Location = new System.Drawing.Point(40, 111);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 29;
-            this.textBox10.Text = "1000";
+            this.txtBoxB.Location = new System.Drawing.Point(40, 111);
+            this.txtBoxB.Name = "txtBoxB";
+            this.txtBoxB.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxB.TabIndex = 29;
+            this.txtBoxB.Text = "1000";
             // 
             // label8
             // 
@@ -265,12 +265,12 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtBoxB);
+            this.Controls.Add(this.txtBoxA);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtBoxE);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox6);
@@ -307,11 +307,11 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtBoxE;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtBoxA;
+        private System.Windows.Forms.TextBox txtBoxB;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;

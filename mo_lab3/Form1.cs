@@ -42,50 +42,9 @@ namespace mo_lab3
             InitializeComponent();
         }
 
-        double func(double x1, double x2, double x3, double x4, double x5, double x6, int i, double r) //Расчет значения вектора в заданной точке пространства
+        double func(double x1, double x2, double x3, double x4, double x5, double x6) //Расчет значения функция
         {
-            double res = 0;
-
-            switch(i)
-            {
-                case 0:
-                    {
-                        res = (c1 * r) + (c2 * x2) + (c3 * x3) + (c4 * x4) + (c5 * x5) + (c6 * x6);
-                        break;
-                    }
-                case 1:
-                    {
-                        res = (c1 * x1) + (c2 * r) + (c3 * x3) + (c4 * x4) + (c5 * x5) + (c6 * x6);
-                        break;
-                    }
-                case 2:
-                    {
-                        res = (c1 * x1) + (c2 * x2) + (c3 * r) + (c4 * x4) + (c5 * x5) + (c6 * x6);
-                        break;
-                    }
-                case 3:
-                    {
-                        res = (c1 * x1) + (c2 * x2) + (c3 * x3) + (c4 * r) + (c5 * x5) + (c6 * x6);
-                        break;
-                    }
-                case 4:
-                    {
-                        res = (c1 * x1) + (c2 * x2) + (c3 * x3) + (c4 * x4) + (c5 * r) + (c6 * x6);
-                        break;
-                    }
-                case 5:
-                    {
-                        res = (c1 * x1) + (c2 * x2) + (c3 * x3) + (c4 * x4) + (c5 * x5) + (c6 * r);
-                        break;
-                    }
-                default:
-                    {
-                        res = (c1 * x1) + (c2 * x2) + (c3 * x3) + (c4 * x4) + (c5 * x5) + (c6 * x6);
-                        break;
-                    }
-            }
-
-            return res; //((c1 * x1) + (c2 * x2) + (c3 * x3) + (c4 * x4) + (c5 * x5) + (c6 * x6))
+            return (c1 * x1) + (c2 * x2) + (c3 * x3) + (c4 * x4) + (c5 * x5) + (c6 * x6);
         }
 
         void getC() //Считывание коэффициентов
@@ -102,15 +61,15 @@ namespace mo_lab3
         {
             bool flag = false; //Было ли найдено решение
             double r, prev = 0;
-            double eps = Convert.ToDouble(textBox7.Text);
+            double eps = Convert.ToDouble(txtBoxE.Text);
             double min; //Минимальное найденное значение функции
             List<double> x = new List<double>(); //Список коэффициентов при элементах вектора
             List<Search> s = new List<Search>(); //Список объектов класса Search для поиска значений x методом дихотомии
 
             {
                 double a, b; //Запись значений коэффициентов x и диапазона для поиска минимума или максимума
-                a = Convert.ToDouble(textBox9.Text);
-                b = Convert.ToDouble(textBox10.Text);
+                a = Convert.ToDouble(txtBoxA.Text);
+                b = Convert.ToDouble(txtBoxB.Text);
 
                 Search p = new Search(a, b, Convert.ToDouble(textBox1.Text));
                 s.Add(p);
@@ -139,8 +98,8 @@ namespace mo_lab3
 
             getC();
 
-            min = func(x[0], x[1], x[2], x[3], x[4], x[5], -1, -1);
-            prev = func(x[0], x[1], x[2], x[3], x[4], x[5], -1, -1);
+            min = func(x[0], x[1], x[2], x[3], x[4], x[5]);
+            prev = min;
 
             int k = 0; //Количество итераций
             int c = 0; //Количество вычислений
@@ -150,14 +109,9 @@ namespace mo_lab3
                 k++;
                 for(int i = 0; i < 6; i++)
                 {
-                    //Random rand = new Random(i + k + Convert.ToInt32(DateTime.Now.Millisecond)); //Генерация случайного числа из диапазона
-                    //r = rand.Next(-1000, 1000);
-                    //Random rand2 = new Random(i + k + Convert.ToInt32(DateTime.Now.Millisecond)); ;
-                    //r += rand.Next(0, 100) / 100.00;
-                    //x[i] = r;
 
                     x[i] = s[i].iter(); //Итерация поиска максимума или минимума из заданного диапазона с учетом коэффициента при x[i]
-                    min = func(x[0], x[1], x[2], x[3], x[4], x[5], -1, -1);
+                    min = func(x[0], x[1], x[2], x[3], x[4], x[5]);
 
                     c += 2;
                     if (Math.Abs(prev - min) <= eps) //Если решение найдено, прекращаем поиск
@@ -173,7 +127,7 @@ namespace mo_lab3
             textBox8.Text = "";
             textBox8.AppendText("Количество итераций: " + k + "\n");
             textBox8.AppendText("Количество вычислений: " + c + "\n");
-            textBox8.AppendText("Полученное минимальное значение функции: " + Convert.ToString(func(x[0], x[1], x[2], x[3], x[4], x[5], -1, -1)) + "\n");
+            textBox8.AppendText("Полученное минимальное значение функции: " + Convert.ToString(func(x[0], x[1], x[2], x[3], x[4], x[5])) + "\n");
             textBox8.AppendText("Предыдущее минимальное значение: " + Convert.ToString(prev) + "\n");
 
             for (int i = 0; i < 6; i++)
